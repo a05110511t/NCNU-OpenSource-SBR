@@ -10,4 +10,4 @@ $wget https://pypi.python.org/packages/source/R/RPi.GPIO/RPi.GPIO-0.5.4.tar.gz
 $tar xvzf RPi.GPIO-0.5.4.tar.gz
 $cd RPi.GPIO-0.5.4
 $sudo apt-get install libevent-dev
-$sudo python3 setup.py install #python will crash.
+$sudo python3 setup.py install #python2 will crash.
