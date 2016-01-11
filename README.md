@@ -5,11 +5,9 @@ Shyshy Balancing Robot
 sudo iwconfig wlanX essid NAME
 sudo dhclient -v wlan0
 http://inpega.blogspot.tw/2013/09/blog-post_15.html
+Then we can ssh it.
 
-2. Install RPi.GPIO 
-$sudo apt-get install python-dev
-$wget https://pypi.python.org/packages/source/R/RPi.GPIO/RPi.GPIO-0.5.4.tar.gz
-$tar xvzf RPi.GPIO-0.5.4.tar.gz
-$cd RPi.GPIO-0.5.4
-$sudo apt-get install libevent-dev
-$sudo python3 setup.py install #python2 will crash.
+2. 
+
+
+3.
