@@ -1,5 +1,5 @@
-# PPQ
-Poorman's Printed Quadcopter
+#SBR  
+Shyshy Balancing Robot
 
 1. Let pi learning use WiFi, so we can ssh it.
 sudo iwconfig wlanX essid NAME
