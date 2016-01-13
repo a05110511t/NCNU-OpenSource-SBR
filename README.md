@@ -10,7 +10,6 @@ Then we can ssh it.
 ##概念發想
 [![參考影片](http://i.ytimg.com/vi/YRdBsVTHEG0/0.jpg)](https://www.youtube.com/watch?v=7-mgaIe287M)
 
-
 ##實作所需材料
  材料 | 取得來源 | 價格 
 ------------ | ------------- | -------------
@@ -24,12 +23,12 @@ Raspberry Pi|			課程提供|			for free
 
 ##運作原理-接線
 1.陀螺儀配置
-
+![陀螺儀](https://github.com/NCNU-OpenSource/PPQ/blob/master/images/mpu-6050.jpg)
 2.控制板配置
-
-##運作原理-參數微調
+![控制板](https://github.com/NCNU-OpenSource/PPQ/blob/master/images/motor.jpg)
 
 ##DEMO
+![Shyshy Balancing Robot](https://github.com/NCNU-OpenSource/PPQ/blob/master/images/finish.jpg)
 [![DEMO影片](http://i.ytimg.com/vi/Ki7mhFmQ6sM/0.jpg)](https://www.youtube.com/watch?v=Ki7mhFmQ6sM)
 
 ##END
