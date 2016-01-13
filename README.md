@@ -6,6 +6,7 @@ sudo iwconfig wlanX essid NAME
 sudo dhclient -v wlan0
 http://inpega.blogspot.tw/2013/09/blog-post_15.html
 Then we can ssh it.
+
 ##概念發想
 [![參考影片](http://i.ytimg.com/vi/YRdBsVTHEG0/0.jpg)](https://www.youtube.com/watch?v=7-mgaIe287M)
 
