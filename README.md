@@ -29,6 +29,9 @@ Raspberry Pi|			課程提供|			for free
 
 ##運作原理-參數微調
 
-[![實作影片](http://i.ytimg.com/vi/Ki7mhFmQ6sM/0.jpg)](https://www.youtube.com/watch?v=Ki7mhFmQ6sM)
+##DEMO
+[![DEMO影片](http://i.ytimg.com/vi/Ki7mhFmQ6sM/0.jpg)](https://www.youtube.com/watch?v=Ki7mhFmQ6sM)
+
+##END
 
 
