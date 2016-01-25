@@ -7,7 +7,7 @@ import time
 import sys
 
 
-# ================ MPU6050 ============
+# ================ MPU6050 compute ============
 
 # Power management registers
 power_mgmt_1 = 0x6b
@@ -46,7 +46,7 @@ address = 0x68       # This is the address value read via the i2cdetect command
 # Now wake the 6050 up as it starts in sleep mode
 bus.write_byte_data(address, power_mgmt_1, 0)
 
-# ================ ./MPU6050 ============
+# ================ ./MPU6050 compute ============
 
 # ================ motor controller ============
 
@@ -64,47 +64,24 @@ def forward(tf):
     gpio.output(15, False)
     time.sleep(tf)
     gpio.cleanup()
+    
+def reverse(tf):
+    gpio.output(7, True)
+    gpio.output(11, False)
+    gpio.output(13, False)
+    gpio.output(15, True)
+    time.sleep(tf)
+    gpio.cleanup()
 
 # ================ ./motor controller ============
 
-def key_input(event):
-    init()
-    print 'Key:', event.char
-    key_press = event.char
-    sleep_time = 0.030
-
-    if key_press.lower() == 'w':
-        forward(sleep_time)
-    elif key_press.lower() == 's':
-        reverse(sleep_time)
-    elif key_press.lower() == 'a':
-        turn_left(sleep_time)
-    elif key_press.lower() == 'd':
-        turn_right(sleep_time)
-    elif key_press.lower() == 'q':
-        pivot_left(sleep_time)
-    elif key_press.lower() == 'e':
-        pivot_right(sleep_time)
-    elif key_press.lower() == 'c':
-        turn_rightback(sleep_time)
-    elif key_press.lower() == 'z':
-        turn_leftback(sleep_time)
-    else:
-        pass
-
-# ------------------- motors sleep time -------------------------
-sleep_time =0.07375
+sleep_time = 0.07375 # ------------------- 馬達運轉時間 -------------------------
 
 while True:
-    # ------------------------ MPU-6050 sleep time --------------------
-    time.sleep(0.055)
+    time.sleep(0.055) # ------------------------ 陀螺儀再次偵測的時間間格 --------------------
     gyro_xout = read_word_2c(0x43)
     gyro_yout = read_word_2c(0x45)
     gyro_zout = read_word_2c(0x47)
-
-    #print "gyro_xout : ", gyro_xout, " scaled: ", (gyro_xout / 131)
-    #print "gyro_yout : ", gyro_yout, " scaled: ", (gyro_yout / 131)
-    #print "gyro_zout : ", gyro_zout, " scaled: ", (gyro_zout / 131)
 
     accel_xout = read_word_2c(0x3b)
     accel_yout = read_word_2c(0x3d)
@@ -114,26 +91,22 @@ while True:
     accel_yout_scaled = accel_yout / 16384.0
     accel_zout_scaled = accel_zout / 16384.0
 
-    #print "accel_xout: ", accel_xout, " scaled: ", accel_xout_scaled
-    #print "accel_yout: ", accel_yout, " scaled: ", accel_yout_scaled
-    #print "accel_zout: ", accel_zout, " scaled: ", accel_zout_scaled
-
     x_rotation = get_x_rotation(accel_xout_scaled, accel_yout_scaled, accel_zout_scaled)
     y_rotation = get_y_rotation(accel_xout_scaled, accel_yout_scaled, accel_zout_scaled)
 
+    # 即時顯示目前的角度
     print "x rotation: ",x_rotation
     print "y rotation: ",y_rotation
     print "----------------------------------"
 
     if y_rotation > 11 :
-        #print "forward",sleep_time
+        # 向前傾11度時，向前移動
         init()
         forward(sleep_time)
     elif y_rotation < -9.8 :
-        #print "reverse",sleep_time
+        # 向前傾11度時，向後移動
         init()
         reverse(sleep_time)
     else:
+        # 安全區內，不做動作
         print "good"
-
-
