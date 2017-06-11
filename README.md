@@ -1,4 +1,4 @@
-# SBR for NCNU Linux管理與實務 指導：BlurT 
+# SBR for NCNU Linux管理與實務 指導：BlueT 
 羞羞平衡車 Shyshy Balancing Robot
 
 ##概念發想
