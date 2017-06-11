@@ -1,11 +1,11 @@
 # SBR for NCNU Linux管理與實務 指導：BlueT 
 羞羞平衡車 Shyshy Balancing Robot
 
-##概念發想
+### 概念發想
 暨大是個美麗的校園，但幅員真的很廣大，有天在管院，看到有人在玩兩輪平衡車，站在上面利用身體重心移動。這對於想欣賞風景，又不想動腳的人真的相當方便，因此我們想利用他的原理，DIY一台用PI整合的兩輪平衡車。
 [![參考影片](http://i.ytimg.com/vi/YRdBsVTHEG0/0.jpg)](https://www.youtube.com/watch?v=7-mgaIe287M)
 
-##實作所需材料
+### 實作所需材料
 <table>
 	<thead>
 		<tr>
