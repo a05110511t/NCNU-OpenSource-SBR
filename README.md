@@ -62,7 +62,7 @@
 	</tbody>
 </table>
 
-##實作
+### 實作
 <p>剛開始我們有的設備是Pi、wifi網卡、tty線。</p>
 
 <p>因為我們做的是會行動的東西，所以勢必最後要擺脫tty線。我們發現有兩種方式可行: <br>
@@ -99,6 +99,6 @@ sensor運作上<br>
 控制板是參考去年BT-7的配線方法<br>
 ![控制板](https://github.com/NCNU-OpenSource/PPQ/blob/master/images/motor.jpg)
 
-##DEMO
+### DEMO
 ![Shyshy Balancing Robot](https://github.com/NCNU-OpenSource/PPQ/blob/master/images/finish.jpg)
 [![DEMO影片](http://i.ytimg.com/vi/Ki7mhFmQ6sM/0.jpg)](https://www.youtube.com/watch?v=Ki7mhFmQ6sM)
